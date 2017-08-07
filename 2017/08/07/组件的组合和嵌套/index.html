@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>张翔宇的博客</title>
+  <title>react组件嵌套 | 张翔宇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:react组件嵌套组件的组合  嵌套 每一个组件都会返回一个dom结构渲染到页面中,但是如果我们要做一个很大的项目,把所有的组件都写到一个组件里面的话,这样不便于我们后期的管理.而且假设有一段dom结构我们要重复使用的话,后期修改起来也是一件很麻烦的事情;而react的组件嵌套帮我们很好的解决了这一个问题;我们把整个大的结构划分成若干个小的组件,然后再嵌套在一起,这样既使得代码变得更">
+  <meta name="description" content="组件的组合  嵌套 每一个组件都会返回一个dom结构渲染到页面中,但是如果我们要做一个很大的项目,把所有的组件都写到一个组件里面的话,这样不便于我们后期的管理.而且假设有一段dom结构我们要重复使用的话,后期修改起来也是一件很麻烦的事情;而react的组件嵌套帮我们很好的解决了这一个问题;我们把整个大的结构划分成若干个小的组件,然后再嵌套在一起,这样既使得代码变得更加整洁,还能让代码的复用性变得简">
 <meta property="og:type" content="article">
-<meta property="og:title" content="张翔宇的博客">
+<meta property="og:title" content="react组件嵌套">
 <meta property="og:url" content="http://yoursite.com/2017/08/07/组件的组合和嵌套/index.html">
 <meta property="og:site_name" content="张翔宇的博客">
-<meta property="og:description" content="title:react组件嵌套组件的组合  嵌套 每一个组件都会返回一个dom结构渲染到页面中,但是如果我们要做一个很大的项目,把所有的组件都写到一个组件里面的话,这样不便于我们后期的管理.而且假设有一段dom结构我们要重复使用的话,后期修改起来也是一件很麻烦的事情;而react的组件嵌套帮我们很好的解决了这一个问题;我们把整个大的结构划分成若干个小的组件,然后再嵌套在一起,这样既使得代码变得更">
-<meta property="og:updated_time" content="2017-08-07T06:12:10.843Z">
+<meta property="og:description" content="组件的组合  嵌套 每一个组件都会返回一个dom结构渲染到页面中,但是如果我们要做一个很大的项目,把所有的组件都写到一个组件里面的话,这样不便于我们后期的管理.而且假设有一段dom结构我们要重复使用的话,后期修改起来也是一件很麻烦的事情;而react的组件嵌套帮我们很好的解决了这一个问题;我们把整个大的结构划分成若干个小的组件,然后再嵌套在一起,这样既使得代码变得更加整洁,还能让代码的复用性变得简">
+<meta property="og:updated_time" content="2017-08-07T06:24:37.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张翔宇的博客">
-<meta name="twitter:description" content="title:react组件嵌套组件的组合  嵌套 每一个组件都会返回一个dom结构渲染到页面中,但是如果我们要做一个很大的项目,把所有的组件都写到一个组件里面的话,这样不便于我们后期的管理.而且假设有一段dom结构我们要重复使用的话,后期修改起来也是一件很麻烦的事情;而react的组件嵌套帮我们很好的解决了这一个问题;我们把整个大的结构划分成若干个小的组件,然后再嵌套在一起,这样既使得代码变得更">
+<meta name="twitter:title" content="react组件嵌套">
+<meta name="twitter:description" content="组件的组合  嵌套 每一个组件都会返回一个dom结构渲染到页面中,但是如果我们要做一个很大的项目,把所有的组件都写到一个组件里面的话,这样不便于我们后期的管理.而且假设有一段dom结构我们要重复使用的话,后期修改起来也是一件很麻烦的事情;而react的组件嵌套帮我们很好的解决了这一个问题;我们把整个大的结构划分成若干个小的组件,然后再嵌套在一起,这样既使得代码变得更加整洁,还能让代码的复用性变得简">
   
     <link rel="alternate" href="/atom.xml" title="张翔宇的博客" type="application/atom+xml">
   
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -66,17 +66,26 @@
         <section id="main"><article id="post-组件的组合和嵌套" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/组件的组合和嵌套/" class="article-date">
-  <time datetime="2017-08-07T06:12:10.843Z" itemprop="datePublished">2017-08-07</time>
+  <time datetime="2017-08-07T06:24:37.277Z" itemprop="datePublished">2017-08-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react组件嵌套
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-react组件嵌套"><a href="#title-react组件嵌套" class="headerlink" title="title:react组件嵌套"></a>title:react组件嵌套</h2><h4 id="组件的组合-嵌套"><a href="#组件的组合-嵌套" class="headerlink" title="组件的组合  嵌套"></a>组件的组合  嵌套</h4><blockquote>
+        <h4 id="组件的组合-嵌套"><a href="#组件的组合-嵌套" class="headerlink" title="组件的组合  嵌套"></a>组件的组合  嵌套</h4><blockquote>
 <p>每一个组件都会返回一个dom结构渲染到页面中,但是如果我们要做一个很大的项目,把所有的组件都写到一个组件里面的话,这样不便于我们后期的管理.而且假设有一段dom结构我们要重复使用的话,后期修改起来也是一件很麻烦的事情;而react的组件嵌套帮我们很好的解决了这一个问题;我们把整个大的结构划分成若干个小的组件,然后再嵌套在一起,这样既使得代码变得更加整洁,还能让代码的复用性变得简单,最重要的是我们要修改某一个结构的时候,只要修改相应的组件就可以了;而他们之间的嵌套规则也很简单:</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">import React,&#123;Component&#125; from &apos;react&apos;;</div><div class="line">import &#123;render&#125; from &apos;react-dom&apos;;</div><div class="line">import Header from &apos;./components/Header&apos;</div><div class="line"></div><div class="line">class Content1 extends Component&#123;</div><div class="line">    render()&#123;</div><div class="line">        return (</div><div class="line">         &lt;div&gt;</div><div class="line">            &lt;p&gt;这是一个文本1&lt;/p&gt;</div><div class="line">         &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">class Content2 extends Component&#123;</div><div class="line">     render()&#123;</div><div class="line">         return (</div><div class="line">          &lt;div&gt;</div><div class="line">             &lt;p&gt;这是一个文本2&lt;/p&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">         )</div><div class="line">     &#125;</div><div class="line"> &#125;</div><div class="line"> class Title extends Component&#123;</div><div class="line">    render()&#123;</div><div class="line">        return (</div><div class="line">         &lt;div&gt;</div><div class="line">            &lt;h1&gt;这是一个标题&lt;/h1&gt;</div><div class="line">            &lt;Content1 &gt;</div><div class="line">            &lt;Content2&gt;</div><div class="line">         &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class App extends Component&#123;</div><div class="line">    render()&#123;</div><div class="line">        return(</div><div class="line">            &lt;div&gt;</div><div class="line">               &lt;Title/&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">render(&lt;App/&gt;,window.app);</div><div class="line">最后显示在页面中的内容是</div><div class="line"> 这是一个标题</div><div class="line"> 这是一个文本1 </div><div class="line"> 这是一个文本2</div></pre></td></tr></table></figure>
@@ -88,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/组件的组合和嵌套/" data-id="cj61rf5g20002akuhhtb1e6q1" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/07/组件的组合和嵌套/" data-id="cj61rv5j70003a8uh1u45mt66" class="article-share-link">Share</a>
       
       
     </footer>
@@ -98,18 +107,18 @@
 <nav id="article-nav">
   
     <a href="/2017/08/07/react渲染页面的方式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          react渲染页面的方式
         
       </div>
     </a>
   
   
     <a href="/2017/08/07/基本环境的配置/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">react开发环境的配置</div>
     </a>
   
 </nav>
@@ -141,24 +150,24 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/08/07/react渲染页面的方式/">(no title)</a>
+            <a href="/2017/08/07/react渲染页面的方式/">react渲染页面的方式</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/组件的组合和嵌套/">(no title)</a>
+            <a href="/2017/08/07/组件的组合和嵌套/">react组件嵌套</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/基本环境的配置/">(no title)</a>
+            <a href="/2017/08/07/基本环境的配置/">react开发环境的配置</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/初识npm/">(no title)</a>
+            <a href="/2017/08/07/初识npm/">初识npm</a>
           </li>
         
       </ul>
@@ -174,7 +183,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 张翔宇<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

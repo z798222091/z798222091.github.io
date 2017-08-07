@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>张翔宇的博客</title>
+  <title>react渲染页面的方式 | 张翔宇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:react渲染页面的方式react渲染页面的方式12345678910111213141516import React, &amp;#123; Component &amp;#125; from &apos;react&apos;import ReactDOM from &apos;react-dom&apos;import &apos;./index.css&apos;class Header extends Component &amp;#123;  ren">
+  <meta name="description" content="react渲染页面的方式12345678910111213141516import React, &amp;#123; Component &amp;#125; from &apos;react&apos;import ReactDOM from &apos;react-dom&apos;import &apos;./index.css&apos;class Header extends Component &amp;#123;  render () &amp;#123;    retu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="张翔宇的博客">
+<meta property="og:title" content="react渲染页面的方式">
 <meta property="og:url" content="http://yoursite.com/2017/08/07/react渲染页面的方式/index.html">
 <meta property="og:site_name" content="张翔宇的博客">
-<meta property="og:description" content="title:react渲染页面的方式react渲染页面的方式12345678910111213141516import React, &amp;#123; Component &amp;#125; from &apos;react&apos;import ReactDOM from &apos;react-dom&apos;import &apos;./index.css&apos;class Header extends Component &amp;#123;  ren">
-<meta property="og:updated_time" content="2017-08-07T06:12:10.853Z">
+<meta property="og:description" content="react渲染页面的方式12345678910111213141516import React, &amp;#123; Component &amp;#125; from &apos;react&apos;import ReactDOM from &apos;react-dom&apos;import &apos;./index.css&apos;class Header extends Component &amp;#123;  render () &amp;#123;    retu">
+<meta property="og:updated_time" content="2017-08-07T06:24:37.289Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张翔宇的博客">
-<meta name="twitter:description" content="title:react渲染页面的方式react渲染页面的方式12345678910111213141516import React, &amp;#123; Component &amp;#125; from &apos;react&apos;import ReactDOM from &apos;react-dom&apos;import &apos;./index.css&apos;class Header extends Component &amp;#123;  ren">
+<meta name="twitter:title" content="react渲染页面的方式">
+<meta name="twitter:description" content="react渲染页面的方式12345678910111213141516import React, &amp;#123; Component &amp;#125; from &apos;react&apos;import ReactDOM from &apos;react-dom&apos;import &apos;./index.css&apos;class Header extends Component &amp;#123;  render () &amp;#123;    retu">
   
     <link rel="alternate" href="/atom.xml" title="张翔宇的博客" type="application/atom+xml">
   
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -66,17 +66,26 @@
         <section id="main"><article id="post-react渲染页面的方式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/react渲染页面的方式/" class="article-date">
-  <time datetime="2017-08-07T06:12:10.852Z" itemprop="datePublished">2017-08-07</time>
+  <time datetime="2017-08-07T06:24:37.288Z" itemprop="datePublished">2017-08-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react渲染页面的方式
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-react渲染页面的方式"><a href="#title-react渲染页面的方式" class="headerlink" title="  title:react渲染页面的方式"></a>  title:react渲染页面的方式</h2><h3 id="react渲染页面的方式"><a href="#react渲染页面的方式" class="headerlink" title="react渲染页面的方式"></a>react渲染页面的方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'./index.css'</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Header</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;这是一段文字&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">      &lt;/</span>div&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Header /&gt;,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+        <h3 id="react渲染页面的方式"><a href="#react渲染页面的方式" class="headerlink" title="react渲染页面的方式"></a>react渲染页面的方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'./index.css'</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Header</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;这是一段文字&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">      &lt;/</span>div&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Header /&gt;,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
 <ol>
 <li>上边的代码中,创建了一个叫做Header的类,而我们所创建的每一个类都是一个组件,在这个类中有一个render方法,它返回的是一个dom结构.而在最外面要用一个jsx元素把里面的内容包裹起来;</li>
 <li>在上边我们在react-dom 中引用了ReactDom这个属性,而这个属性中包含了一个render方法,这个方法接收两个参数,第一个参数是我们创建好的组件,里面包含了我们定义好的dom结构,第二个参数代表我们要插入的dom元素.通过这种方法,我们可以把我们需要的dom结构插入到特定的dom元素中;</li>
@@ -99,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/react渲染页面的方式/" data-id="cj61rf5fs0000akuhn7xqglrr" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/07/react渲染页面的方式/" data-id="cj61rv5j60002a8uhkj8xya6r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -110,8 +119,8 @@
   
   
     <a href="/2017/08/07/组件的组合和嵌套/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">react组件嵌套</div>
     </a>
   
 </nav>
@@ -143,24 +152,24 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/08/07/react渲染页面的方式/">(no title)</a>
+            <a href="/2017/08/07/react渲染页面的方式/">react渲染页面的方式</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/组件的组合和嵌套/">(no title)</a>
+            <a href="/2017/08/07/组件的组合和嵌套/">react组件嵌套</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/基本环境的配置/">(no title)</a>
+            <a href="/2017/08/07/基本环境的配置/">react开发环境的配置</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/初识npm/">(no title)</a>
+            <a href="/2017/08/07/初识npm/">初识npm</a>
           </li>
         
       </ul>
@@ -176,7 +185,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 张翔宇<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

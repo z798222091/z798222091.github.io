@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>张翔宇的博客</title>
+  <title>初识npm | 张翔宇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:初识npm初识npm nodejs的出现，可以算是前端里程碑式的一个事件，它让前端攻城狮们摆脱了浏览器的束缚，踏上了一个更加宽广的舞台。前端的可能性，从此更加具有想象空间。随着一系列基于nodes的应用/工具的出现，工作中与nodejs打交道的机会越来越多。无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package manager），作为n">
+  <meta name="description" content="初识npm nodejs的出现，可以算是前端里程碑式的一个事件，它让前端攻城狮们摆脱了浏览器的束缚，踏上了一个更加宽广的舞台。前端的可能性，从此更加具有想象空间。随着一系列基于nodes的应用/工具的出现，工作中与nodejs打交道的机会越来越多。无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package manager），作为node的包管理工具，极大">
 <meta property="og:type" content="article">
-<meta property="og:title" content="张翔宇的博客">
+<meta property="og:title" content="初识npm">
 <meta property="og:url" content="http://yoursite.com/2017/08/07/初识npm/index.html">
 <meta property="og:site_name" content="张翔宇的博客">
-<meta property="og:description" content="title:初识npm初识npm nodejs的出现，可以算是前端里程碑式的一个事件，它让前端攻城狮们摆脱了浏览器的束缚，踏上了一个更加宽广的舞台。前端的可能性，从此更加具有想象空间。随着一系列基于nodes的应用/工具的出现，工作中与nodejs打交道的机会越来越多。无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package manager），作为n">
-<meta property="og:updated_time" content="2017-08-07T06:12:10.826Z">
+<meta property="og:description" content="初识npm nodejs的出现，可以算是前端里程碑式的一个事件，它让前端攻城狮们摆脱了浏览器的束缚，踏上了一个更加宽广的舞台。前端的可能性，从此更加具有想象空间。随着一系列基于nodes的应用/工具的出现，工作中与nodejs打交道的机会越来越多。无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package manager），作为node的包管理工具，极大">
+<meta property="og:updated_time" content="2017-08-07T06:24:37.255Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张翔宇的博客">
-<meta name="twitter:description" content="title:初识npm初识npm nodejs的出现，可以算是前端里程碑式的一个事件，它让前端攻城狮们摆脱了浏览器的束缚，踏上了一个更加宽广的舞台。前端的可能性，从此更加具有想象空间。随着一系列基于nodes的应用/工具的出现，工作中与nodejs打交道的机会越来越多。无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package manager），作为n">
+<meta name="twitter:title" content="初识npm">
+<meta name="twitter:description" content="初识npm nodejs的出现，可以算是前端里程碑式的一个事件，它让前端攻城狮们摆脱了浏览器的束缚，踏上了一个更加宽广的舞台。前端的可能性，从此更加具有想象空间。随着一系列基于nodes的应用/工具的出现，工作中与nodejs打交道的机会越来越多。无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package manager），作为node的包管理工具，极大">
   
     <link rel="alternate" href="/atom.xml" title="张翔宇的博客" type="application/atom+xml">
   
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -66,17 +66,26 @@
         <section id="main"><article id="post-初识npm" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/初识npm/" class="article-date">
-  <time datetime="2017-08-07T06:12:10.825Z" itemprop="datePublished">2017-08-07</time>
+  <time datetime="2017-08-07T06:24:37.254Z" itemprop="datePublished">2017-08-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      初识npm
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-初识npm"><a href="#title-初识npm" class="headerlink" title="title:初识npm"></a>title:初识npm</h2><h2 id="初识npm"><a href="#初识npm" class="headerlink" title="初识npm"></a>初识npm</h2><blockquote>
+        <h2 id="初识npm"><a href="#初识npm" class="headerlink" title="初识npm"></a>初识npm</h2><blockquote>
 <p>nodejs的出现，可以算是前端里程碑式的一个事件，它让前端攻城狮们摆脱了浏览器<br>的束缚，踏上了一个更加宽广的舞台。前端的可能性，从此更加具有想象空间。随着一<br>系列基于nodes的应用/工具的出现，工作中与nodejs打交道的机会越来越多。无论在<br>node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package<br> manager），作为node的包管理工具，极大地便利了我们的开发工作，很有必要了解一下。</p>
 </blockquote>
 <h4 id="NPM是什么"><a href="#NPM是什么" class="headerlink" title="NPM是什么"></a>NPM是什么</h4><ul>
@@ -142,7 +151,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/初识npm/" data-id="cj61rf5fz0001akuhidaabz85" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/07/初识npm/" data-id="cj61rv5iu0000a8uhqmp2ye7t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,10 +161,10 @@
 <nav id="article-nav">
   
     <a href="/2017/08/07/基本环境的配置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          react开发环境的配置
         
       </div>
     </a>
@@ -190,24 +199,24 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/08/07/react渲染页面的方式/">(no title)</a>
+            <a href="/2017/08/07/react渲染页面的方式/">react渲染页面的方式</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/组件的组合和嵌套/">(no title)</a>
+            <a href="/2017/08/07/组件的组合和嵌套/">react组件嵌套</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/基本环境的配置/">(no title)</a>
+            <a href="/2017/08/07/基本环境的配置/">react开发环境的配置</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/初识npm/">(no title)</a>
+            <a href="/2017/08/07/初识npm/">初识npm</a>
           </li>
         
       </ul>
@@ -223,7 +232,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 张翔宇<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

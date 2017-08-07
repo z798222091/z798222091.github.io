@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,17 +64,26 @@
     <article id="post-react渲染页面的方式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/react渲染页面的方式/" class="article-date">
-  <time datetime="2017-08-07T06:12:10.852Z" itemprop="datePublished">2017-08-07</time>
+  <time datetime="2017-08-07T06:24:37.288Z" itemprop="datePublished">2017-08-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/07/react渲染页面的方式/">react渲染页面的方式</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-react渲染页面的方式"><a href="#title-react渲染页面的方式" class="headerlink" title="  title:react渲染页面的方式"></a>  title:react渲染页面的方式</h2><h3 id="react渲染页面的方式"><a href="#react渲染页面的方式" class="headerlink" title="react渲染页面的方式"></a>react渲染页面的方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'./index.css'</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Header</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;这是一段文字&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">      &lt;/</span>div&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Header /&gt;,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+        <h3 id="react渲染页面的方式"><a href="#react渲染页面的方式" class="headerlink" title="react渲染页面的方式"></a>react渲染页面的方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'./index.css'</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Header</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render () &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;这是一段文字&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">      &lt;/</span>div&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Header /&gt;,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
 <ol>
 <li>上边的代码中,创建了一个叫做Header的类,而我们所创建的每一个类都是一个组件,在这个类中有一个render方法,它返回的是一个dom结构.而在最外面要用一个jsx元素把里面的内容包裹起来;</li>
 <li>在上边我们在react-dom 中引用了ReactDom这个属性,而这个属性中包含了一个render方法,这个方法接收两个参数,第一个参数是我们创建好的组件,里面包含了我们定义好的dom结构,第二个参数代表我们要插入的dom元素.通过这种方法,我们可以把我们需要的dom结构插入到特定的dom元素中;</li>
@@ -97,7 +106,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/react渲染页面的方式/" data-id="cj61rf5fs0000akuhn7xqglrr" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/07/react渲染页面的方式/" data-id="cj61rv5j60002a8uhkj8xya6r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -110,17 +119,26 @@
     <article id="post-组件的组合和嵌套" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/组件的组合和嵌套/" class="article-date">
-  <time datetime="2017-08-07T06:12:10.843Z" itemprop="datePublished">2017-08-07</time>
+  <time datetime="2017-08-07T06:24:37.277Z" itemprop="datePublished">2017-08-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/07/组件的组合和嵌套/">react组件嵌套</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-react组件嵌套"><a href="#title-react组件嵌套" class="headerlink" title="title:react组件嵌套"></a>title:react组件嵌套</h2><h4 id="组件的组合-嵌套"><a href="#组件的组合-嵌套" class="headerlink" title="组件的组合  嵌套"></a>组件的组合  嵌套</h4><blockquote>
+        <h4 id="组件的组合-嵌套"><a href="#组件的组合-嵌套" class="headerlink" title="组件的组合  嵌套"></a>组件的组合  嵌套</h4><blockquote>
 <p>每一个组件都会返回一个dom结构渲染到页面中,但是如果我们要做一个很大的项目,把所有的组件都写到一个组件里面的话,这样不便于我们后期的管理.而且假设有一段dom结构我们要重复使用的话,后期修改起来也是一件很麻烦的事情;而react的组件嵌套帮我们很好的解决了这一个问题;我们把整个大的结构划分成若干个小的组件,然后再嵌套在一起,这样既使得代码变得更加整洁,还能让代码的复用性变得简单,最重要的是我们要修改某一个结构的时候,只要修改相应的组件就可以了;而他们之间的嵌套规则也很简单:</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">import React,&#123;Component&#125; from &apos;react&apos;;</div><div class="line">import &#123;render&#125; from &apos;react-dom&apos;;</div><div class="line">import Header from &apos;./components/Header&apos;</div><div class="line"></div><div class="line">class Content1 extends Component&#123;</div><div class="line">    render()&#123;</div><div class="line">        return (</div><div class="line">         &lt;div&gt;</div><div class="line">            &lt;p&gt;这是一个文本1&lt;/p&gt;</div><div class="line">         &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">class Content2 extends Component&#123;</div><div class="line">     render()&#123;</div><div class="line">         return (</div><div class="line">          &lt;div&gt;</div><div class="line">             &lt;p&gt;这是一个文本2&lt;/p&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">         )</div><div class="line">     &#125;</div><div class="line"> &#125;</div><div class="line"> class Title extends Component&#123;</div><div class="line">    render()&#123;</div><div class="line">        return (</div><div class="line">         &lt;div&gt;</div><div class="line">            &lt;h1&gt;这是一个标题&lt;/h1&gt;</div><div class="line">            &lt;Content1 &gt;</div><div class="line">            &lt;Content2&gt;</div><div class="line">         &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class App extends Component&#123;</div><div class="line">    render()&#123;</div><div class="line">        return(</div><div class="line">            &lt;div&gt;</div><div class="line">               &lt;Title/&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">render(&lt;App/&gt;,window.app);</div><div class="line">最后显示在页面中的内容是</div><div class="line"> 这是一个标题</div><div class="line"> 这是一个文本1 </div><div class="line"> 这是一个文本2</div></pre></td></tr></table></figure>
@@ -132,7 +150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/组件的组合和嵌套/" data-id="cj61rf5g20002akuhhtb1e6q1" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/07/组件的组合和嵌套/" data-id="cj61rv5j70003a8uh1u45mt66" class="article-share-link">Share</a>
       
       
     </footer>
@@ -145,17 +163,26 @@
     <article id="post-基本环境的配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/基本环境的配置/" class="article-date">
-  <time datetime="2017-08-07T06:12:10.834Z" itemprop="datePublished">2017-08-07</time>
+  <time datetime="2017-08-07T06:24:37.266Z" itemprop="datePublished">2017-08-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/07/基本环境的配置/">react开发环境的配置</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-react开发环境的配置"><a href="#title-react开发环境的配置" class="headerlink" title="   title:react开发环境的配置"></a>   title:react开发环境的配置</h2><h2 id="react"><a href="#react" class="headerlink" title="react"></a>react</h2><blockquote>
+        <h2 id="react"><a href="#react" class="headerlink" title="react"></a>react</h2><blockquote>
 <p>关于对react的理解: react就是帮助我们把界面分成了好多个小块,每一个小块都是一个组件,组件之间可以嵌套,可以组合,就形成了我们的页面.<br>  其实react.js只是一个库,而不是一个框架,它只是帮我们解决UI层面的问题,而我们要操作数据的变化等的操作,就要借助redux,react-router等来协助了.</p>
 </blockquote>
 <h4 id="基本环境的配置"><a href="#基本环境的配置" class="headerlink" title="基本环境的配置:"></a>基本环境的配置:</h4><p>1.首先,使用官方推荐的工具 reacte-react-app 直接生成我们所需要的工程目录,<br>  这个工程目录会帮我们做好各种配置和依赖;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">     npm install -g create-react-app</div><div class="line">```  </div><div class="line">2.完成上面的命令,会在我们的机器上安装一条create-react-app的命令,我们可以用它来构建一个react的项目,它会自动帮我们安装好我们需要的配置和依赖;</div></pre></td></tr></table></figure></p>
@@ -165,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/基本环境的配置/" data-id="cj61rf5g30003akuhr8sku4pa" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/07/基本环境的配置/" data-id="cj61rv5j30001a8uh8b08u1lb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,17 +205,26 @@
     <article id="post-初识npm" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/初识npm/" class="article-date">
-  <time datetime="2017-08-07T06:12:10.825Z" itemprop="datePublished">2017-08-07</time>
+  <time datetime="2017-08-07T06:24:37.254Z" itemprop="datePublished">2017-08-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/07/初识npm/">初识npm</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-初识npm"><a href="#title-初识npm" class="headerlink" title="title:初识npm"></a>title:初识npm</h2><h2 id="初识npm"><a href="#初识npm" class="headerlink" title="初识npm"></a>初识npm</h2><blockquote>
+        <h2 id="初识npm"><a href="#初识npm" class="headerlink" title="初识npm"></a>初识npm</h2><blockquote>
 <p>nodejs的出现，可以算是前端里程碑式的一个事件，它让前端攻城狮们摆脱了浏览器<br>的束缚，踏上了一个更加宽广的舞台。前端的可能性，从此更加具有想象空间。随着一<br>系列基于nodes的应用/工具的出现，工作中与nodejs打交道的机会越来越多。无论在<br>node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package<br> manager），作为node的包管理工具，极大地便利了我们的开发工作，很有必要了解一下。</p>
 </blockquote>
 <h4 id="NPM是什么"><a href="#NPM是什么" class="headerlink" title="NPM是什么"></a>NPM是什么</h4><ul>
@@ -254,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/初识npm/" data-id="cj61rf5fz0001akuhidaabz85" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/07/初识npm/" data-id="cj61rv5iu0000a8uhqmp2ye7t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -289,24 +325,24 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/08/07/react渲染页面的方式/">(no title)</a>
+            <a href="/2017/08/07/react渲染页面的方式/">react渲染页面的方式</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/组件的组合和嵌套/">(no title)</a>
+            <a href="/2017/08/07/组件的组合和嵌套/">react组件嵌套</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/基本环境的配置/">(no title)</a>
+            <a href="/2017/08/07/基本环境的配置/">react开发环境的配置</a>
           </li>
         
           <li>
-            <a href="/2017/08/07/初识npm/">(no title)</a>
+            <a href="/2017/08/07/初识npm/">初识npm</a>
           </li>
         
       </ul>
@@ -322,7 +358,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 张翔宇<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
